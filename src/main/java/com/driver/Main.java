@@ -1,27 +1,22 @@
 package com.driver;
 
 public class Main {
-    public static void main(String[] args){
-        Product p= new Product();
-        int ans= p.product(10,20);
-        int ans1= p.product(10,20,30);
-       double ans2= p.product(1.0,2.0);
+    public static void main(String[] args) {
+        // Task 3: Create an object of class RWOnly
+        RWOnly obj = new RWOnly();
 
-        System.out.println(ans+" "+ans1+" "+ans2);
+        // Task 4: Try setting a value to 'name' directly
+        // Error: 'name' has private access in RWOnly
+        // obj.name = "John"; // This will result in an error
 
+        // Task 4: Try printing 'name' directly
+        // Error: 'name' has private access in RWOnly
+        // System.out.println(obj.name); // This will result in an error
 
+        // Task 6: Set a value to 'name' using setter function
+        obj.setName("John");
 
+        // Task 6: Access the value of 'name' using getter function
+        System.out.println("Name: " + obj.getName()); // Output: Name: John
     }
-   public static class  Product{
-        public  int product(int x,int y){
-            return x*y;
-        }
-        public  int product(int x,int y,int z){
-            return x*y*z;
-        }
-        public  double product(double x,double y){
-            return x*y;
-        }
-    }
-  
 }
